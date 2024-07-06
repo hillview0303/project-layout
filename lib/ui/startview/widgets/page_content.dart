@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/ui/startview/widgets/show_custom_bottom_sheet.dart';
 
 import '../../../_core/constants/constants.dart';
 import '../components/bottom_sheet.dart';
+import '../components/sign_in.dart';
+import '../components/sign_up.dart';
 import 'gradient_text_button.dart';
 
 Widget PageContent(
@@ -51,14 +54,14 @@ Widget PageContent(
                   GradientTextButton(
                     text: "로그인",
                     onPressed: () {
-                      _showBottomSheet(context, "로그인");
+                      showCustomBottomSheet(context, "로그인");
                     },
                   ),
                   const SizedBox(height: 20),
                   GradientTextButton(
                     text: "회원가입",
                     onPressed: () {
-                      _showBottomSheet(context, "회원가입");
+                      showCustomBottomSheet(context, "회원가입");
                     },
                   ),
                 ],
@@ -70,24 +73,3 @@ Widget PageContent(
   );
 }
 
-void _showBottomSheet(BuildContext context, String title) {
-  showModalBottomSheet(
-    context: context,
-    isScrollControlled: true,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-    ),
-    builder: (BuildContext context) {
-      return Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height * 0.8,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-        ),
-        padding: EdgeInsets.all(16),
-        child: BottomSheetContent(title: title),
-      );
-    },
-  );
-}

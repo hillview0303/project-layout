@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/_core/constants/size.dart';
 
 import '../../../_core/constants/constants.dart';
 
@@ -18,9 +19,8 @@ class GradientTextButton extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(20),
         color: Colors.white,
-        border: Border.all(color: TColor.primaryColor1, width: 2),
       ),
       child: TextButton(
         onPressed: onPressed,

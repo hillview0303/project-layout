@@ -4,6 +4,7 @@ import '../../../_core/constants/constants.dart';
 import '../../../_core/constants/size.dart';
 import '../../../_core/constants/theme.dart';
 import '../../main/home/home_page.dart';
+import '../../main/main_page.dart';
 import '../widgets/show_custom_bottom_sheet.dart';
 
 class SignIn extends StatelessWidget {
@@ -93,7 +94,7 @@ class SignIn extends StatelessWidget {
                   // 기능구현 전 임시로 홈 화면으로 이동
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
+                    MaterialPageRoute(builder: (context) => MainPage()),
                   );
                 },
                 style: ElevatedButton.styleFrom(
